@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Image, StyleSheet, Text, TouchableOpacity, View, Dimensions, ImageBackground, StatusBar} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View, Dimensions, ImageBackground, Platform} from 'react-native';
 import StyleConfig from '../assets/styles/Styles';
 import AppImages from '../assets/images/index';
 
@@ -18,7 +18,7 @@ class Header extends Component {
                 style={{
                     flex: 1,
                     width: null,
-                    height: 150
+                    height: Platform.OS === 'ios' ? 150 : 144
                 }}
             >
                 <View style={{flex: 1, alignItems: 'center', justifyContent: 'center',flexDirection:'row'}}>
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
 
     headerTitle: {
         fontFamily: StyleConfig.muliBlack,
-        fontSize: StyleConfig.fontSizeH4,
+        fontSize: StyleConfig.fontSizeH3,
         color: StyleConfig.white,
         flex: 1,
         backgroundColor: 'transparent',

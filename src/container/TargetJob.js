@@ -7,14 +7,14 @@
  */
 
 import React, {Component} from 'react';
-import {TextInput, Text, View, TouchableOpacity, Image} from 'react-native';
+import {TextInput, Text, View, ScrollView, Image} from 'react-native';
 import Header from '../common/Header';
 import AppImages from '../assets/images/index';
-import Styles from '../assets/styles/Styles';
+import Styles,{smartScale} from '../assets/styles/Styles';
 import Button from '../common/Button';
 import {Dropdown} from 'react-native-material-dropdown';
 import Hr from "../common/Hr";
-
+import {WINDOW} from '../common/Global'
 
 type Props = {};
 export default class TargetJob extends Component<Props> {
@@ -82,7 +82,8 @@ export default class TargetJob extends Component<Props> {
                     headerText={'TARGET JOB'}
                 />
 
-                <View style={[Styles.cardStyle, {marginTop: 20}]}>
+                <ScrollView scrollEventThrottle={16} style={{height:(WINDOW.height - 165)}}>
+                <View style={[Styles.cardStyle, {marginTop: smartScale(20)}]}>
 
                     <Text style={Styles.textStyle}>Target JobLocation</Text>
                     <View style={{flexDirection: 'row', height: 35, justifyContent: 'center'}}>
@@ -155,7 +156,7 @@ export default class TargetJob extends Component<Props> {
 
                     <Button title={'SUBMIT'}/>
                 </View>
-
+                </ScrollView>
 
             </View>
         );

@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         flex: 1,
         textAlign: 'center',
         fontFamily: StyleConfig.muliBlack,
-        fontSize: StyleConfig.fontSizeH3,
+        fontSize: StyleConfig.fontSizeH2_3,
         color: StyleConfig.white
     }
 });

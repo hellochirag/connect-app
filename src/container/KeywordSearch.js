@@ -9,8 +9,7 @@
 import React, {Component} from 'react';
 import {TextInput, Text, View, TouchableOpacity, Image} from 'react-native';
 import Header from '../common/Header';
-import AppImages from '../assets/images/index';
-import Styles from '../assets/styles/Styles';
+import Styles,{smartScale} from '../assets/styles/Styles';
 import Button from '../common/Button';
 import Hr from '../common/Hr';
 import RadioForm from 'react-native-simple-radio-button';

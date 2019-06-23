@@ -6,7 +6,7 @@ import {WINDOW, deviceType} from '../../common/Global';
 const iPhoneX = (Platform.OS === 'ios' && WINDOW.height === 812);
 const iPhone5 = (Platform.OS === 'ios' && WINDOW.height === 568);
 
-const smartScale = (value) => {
+export const smartScale = (value) => {
     const height = Platform.OS === 'ios' ? iPhoneX ? WINDOW.height - 78 : WINDOW.height : WINDOW.height - 24;
     if (deviceType == 'phone') {
         return (value * height) / 667;
@@ -15,9 +15,6 @@ const smartScale = (value) => {
     }
 };
 
-const screenPaddingValue = iPhoneX ? smartScale(17) : smartScale(26);
-
-const scalarSpace = iPhoneX ? smartScale(11) : smartScale(13);
 
 const getWidthByColumn = (column = 1) => {
     const totalPixel = WINDOW.width;
@@ -25,7 +22,6 @@ const getWidthByColumn = (column = 1) => {
     return ((totalPixel - totalSpace) / column);
 };
 
-const screenChatPaddingValue = iPhoneX ? smartScale(34) : smartScale(26);
 
 export default {
     countPixelRatio: (defaultValue) => {
@@ -39,52 +35,22 @@ export default {
     muliItalic: 'arial',
     muliLight: 'arial',
     muliSemiBold: 'arial',
-
     fontSizeH1: smartScale((deviceType == 'phone') ? 26 : 36),
     fontSizeH2: smartScale((deviceType == 'phone') ? 20 : 26),
     fontSizeH2_3: smartScale((deviceType == 'phone') ? 18 : 22),
     fontSizeH3: smartScale((deviceType == 'phone') ? 15 : 18),
     fontSizeH4: smartScale((deviceType == 'phone') ? 10 : 12),
     fontSizeParagraph: smartScale((deviceType == 'phone') ? 13 : 15),
-
-    getWidthByColumn: (column = 1) => {
-        return (column == 3)
-            ? getWidthByColumn(2) + getWidthByColumn(4) + scalarSpace
-            : getWidthByColumn(column);
-    },
     isiPhoneX: iPhoneX,
     isiPhone5: iPhone5,
     screenPaddingValue: smartScale(16),
-    scalarSpace: scalarSpace,
-    getScreenPadding: screenPaddingValue,
-    getscreenChatPaddingValue: screenChatPaddingValue,
+
     headerHeight: Platform.OS === 'ios' ? iPhoneX ? smartScale(87) : smartScale(65) : smartScale(45),
     appBackground: '#ffffff',
-    inputBorderGray: '#465575',
-    inputFillGrayOne: 'rgba(53, 61, 88,0.5)',
-    inputFillGray: 'rgba(255, 255, 255,0.08)',
-    yellowColor: '#D9B020',
-    inputLabelColor: '#A4B4D8',
-    modalOverlay: 'rgba(0, 0, 0, 0.4)',
-    inputTextGray: '#AFAFAF',
-    darkCyan: '#28464a',
-    white: '#ffffff',
-    disableGray: '#838076',
-    errorTextColor: '#ffffff',
-    buttonHeight: smartScale(42),
-    footerButtonHeight: smartScale(60),
-    buttonTextSize: smartScale((deviceType == 'phone') ? 15 : 18),
-    modalHeaderTextSize: smartScale((deviceType == 'phone') ? 20 : 26),
-    modalHeaderTextColor: '#081F4C',
-    selectedDateBackgroundColor: '#00a2f1',
-    modalDetailTextSize: smartScale((deviceType == 'phone') ? 13 : 15),
-    modalDetailTextColor: '#333333',
-    itemDimension: (WINDOW.width - smartScale(40)) / 2,
-    tabIconActive: '#B4931C',
-    tabIconInActive: '#1E1E1E',
     isIphone: Platform.OS === 'ios',
     headerBackground: '#CA320C',
     buttonBackground: '#081F4C',
+    white: '#ffffff',
     lineColor:'#D1D1D1',
     cardStyle: {
         backgroundColor: "#fff",

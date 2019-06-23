@@ -10,7 +10,7 @@ import React, {Component} from 'react';
 import {TextInput, Text, View, TouchableOpacity, Image} from 'react-native';
 import Header from '../common/Header';
 import AppImages from '../assets/images/index';
-import Styles from '../assets/styles/Styles';
+import Styles,{smartScale} from '../assets/styles/Styles';
 import Button from '../common/Button';
 import {Dropdown} from 'react-native-material-dropdown';
 
@@ -44,7 +44,7 @@ export default class Education extends Component<Props> {
 
                 />
 
-                <View style={[Styles.cardStyle, {marginTop: 50}]}>
+                <View style={[Styles.cardStyle, {marginTop: smartScale(30)}]}>
 
                     <Dropdown
                         label='Degree'

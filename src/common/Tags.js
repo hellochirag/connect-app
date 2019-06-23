@@ -9,7 +9,7 @@ import {
     Image
 } from 'react-native'
 import AppImages from '../assets/images/index';
-
+import Styles,{smartScale} from '../assets/styles/Styles';
 Tags.propTypes = {
     label: PropTypes.string,
 
@@ -66,7 +66,7 @@ function Tags (props) {
                     >
                         {props.label}
                     </Text>
-                    <Image source={AppImages.iconClose} resizeMethod={'cover'} style={{marginLeft:10, width:10,height:10,alignSelf:'center'}}/>
+                    <Image source={AppImages.iconClose} resizeMode={'cover'} style={{marginLeft:10, width:10,height:10,alignSelf:'center'}}/>
 
                 </View>
             </TouchableOpacity>
@@ -76,8 +76,8 @@ function Tags (props) {
 
 const styles = StyleSheet.create({
     container: {
-        marginBottom: 10,
-        marginRight: 10
+        marginBottom: smartScale(10),
+        marginRight: smartScale(10)
     },
     inner: {
         padding: 5,

@@ -10,7 +10,7 @@ import React, {Component} from 'react';
 import {Text, View, TouchableOpacity, Image, FlatList} from 'react-native';
 import Header from '../common/Header';
 import AppImages from '../assets/images/index';
-import Styles from '../assets/styles/Styles';
+import Styles ,{smartScale}from '../assets/styles/Styles';
 import Button from '../common/Button';
 import Hr from '../common/Hr';
 import Tags from '../common/Tags';
@@ -77,28 +77,28 @@ export default class CandidateAdvanceSearch extends Component<Props> {
                         renderItem={({item}) =>
                             <View style={{flexDirection: 'column', height: 40}}>
                                 <TouchableOpacity style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between',alignItems:'center'}}>
-                                    <Text style={[styles.textStyle, {paddingLeft: 20,color:'#8D8D8D'}]}>{item.title}</Text>
+                                    <Text style={[styles.textStyle, {paddingLeft: smartScale(20),color:'#8D8D8D'}]}>{item.title}</Text>
                                     <Image
                                         resizeMode={'cover'}
                                         source={AppImages.iconRightkArrow}
                                         style={{
-                                            width: 20,
-                                            padding:5,
-                                            marginRight:20,
-                                            height: 20}}
+                                            width: 15,
+                                            padding:smartScale(5),
+                                            marginRight:smartScale(20),
+                                            height: 15}}
                                     />
                                 </TouchableOpacity>
                                 <View style={{
                                     backgroundColor: Styles.lineColor,
                                     height: 1,
-                                    marginTop: 3,
+                                    marginTop: smartScale(3),
                                 }}/>
                             </View>
                         }
                         keyExtractor={item => item.key}
                     />
 
-                    <Text style={[Styles.textStyle,{paddingLeft:20,marginTop:10,marginBottom:10}]}>Selected Search Criteria</Text>
+                    <Text style={[Styles.textStyle,{paddingLeft:smartScale(20),color:'#8D8D8D',marginTop:smartScale(10),marginBottom:smartScale(10)}]}>Selected Search Criteria</Text>
 
 
                     <View

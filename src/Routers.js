@@ -28,8 +28,8 @@ class Routers extends Component {
                 <Scene type={ActionConst.REPLACE} key="AdvanceSearch" component={CandidateAdvanceSearch} hideNavBar={true} panHandlers={null} initial={false} />
                 <Scene type={ActionConst.REPLACE} key="Experience" component={ExperienceScreen} hideNavBar={true} panHandlers={null} initial={false} />
                 <Scene type={ActionConst.REPLACE} key="TargetJob" component={TargetJob} hideNavBar={true} panHandlers={null} initial={false} />
-                <Scene type={ActionConst.REPLACE} key="PersonalInfo" component={PersonalInfo} hideNavBar={true} panHandlers={null} initial={false} />
-                <Scene type={ActionConst.REPLACE} key="KeywordSearch" component={KeywordSearch} hideNavBar={true} panHandlers={null} initial={true} />
+                <Scene type={ActionConst.REPLACE} key="PersonalInfo" component={PersonalInfo} hideNavBar={true} panHandlers={null} initial={true} />
+                <Scene type={ActionConst.REPLACE} key="KeywordSearch" component={KeywordSearch} hideNavBar={true} panHandlers={null} initial={false} />
             </Scene>
         )
     }
@@ -42,21 +42,5 @@ class Routers extends Component {
         )
     }
 }
-
-const styles = StyleSheet.create({
-    tabBar: {
-        paddingRight: StyleConfig.countPixelRatio(10),
-        borderTopWidth: StyleConfig.countPixelRatio(1),
-        borderTopColor: (Platform.OS === 'ios') ? '#ffffff' : '#d9d9d9',
-        height: (Platform.OS === 'ios') ? StyleConfig.countPixelRatio(iconHeight) : StyleConfig.countPixelRatio(50),
-        backgroundColor: '#ffffff',
-        shadowColor: "rgba(31,31,31,0.3)",
-        shadowOpacity: 0.3,
-        shadowRadius: StyleConfig.countPixelRatio(8),
-        shadowOffset: {
-            height: StyleConfig.countPixelRatio(-8),
-        }
-    }
-});
 
 export default Routers;
