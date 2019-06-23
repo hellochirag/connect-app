@@ -4,6 +4,21 @@ This is a startup guide for setting up your project.
 
 > Don't upload sensitive data like credit card / bank account details and any kind of secret key like aws private key, sms gateway, payment gateway, database credential etc.
 
+## Screenshots
+
+
+<p>
+<img src="https://github.com/JadavChirag/connect-app/blob/master/screens/Simulator%20Screen%20Shot%20-%20iPhone%20X%20-%202019-05-26%20at%2014.49.26.png" width = "400">
+<img src="https://github.com/JadavChirag/connect-app/blob/master/screens/Simulator%20Screen%20Shot%20-%20iPhone%20X%20-%202019-05-26%20at%2014.50.50.png" alt="upload photo example"width = "400" >
+<img src="https://github.com/JadavChirag/connect-app/blob/master/screens/Simulator%20Screen%20Shot%20-%20iPhone%20X%20-%202019-05-26%20at%2014.51.50.png" alt="go to a profile from feed" width = "400">
+<img src="https://github.com/JadavChirag/connect-app/blob/master/screens/Simulator%20Screen%20Shot%20-%20iPhone%20X%20-%202019-05-26%20at%2014.52.24.png" alt="edit profile example" width = "400" >
+<img src="https://github.com/JadavChirag/connect-app/blob/master/screens/Simulator%20Screen%20Shot%20-%20iPhone%20X%20-%202019-05-26%20at%2014.52.47.png" alt="comment and activity feed example" width = "400">
+  
+<img src="https://github.com/JadavChirag/connect-app/blob/master/screens/Simulator%20Screen%20Shot%20-%20iPhone%20X%20-%202019-05-26%20at%2014.53.12.png" alt="comment and activity feed example" width = "400">
+<img src="https://github.com/JadavChirag/connect-app/blob/master/screens/Simulator%20Screen%20Shot%20-%20iPhone%20X%20-%202019-05-26%20at%2014.53.27.png" alt="comment and activity feed example" width = "400">
+<img src="https://github.com/JadavChirag/connect-app/blob/master/screens/Simulator%20Screen%20Shot%20-%20iPhone%20X%20-%202019-05-26%20at%2014.53.42.png" alt="comment and activity feed example" width = "400">
+</p>
+
 ## Prerequiestes
 * Node v8.3+
 * Npm v5.0+
